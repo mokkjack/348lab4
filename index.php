@@ -71,5 +71,24 @@
         }
     </script>
     <!--PHP Mult table-->
+    <h2>PHP Multiplication Table</h2>
+    <form method = "POST">
+        <label for="multnum"> Enter the number you want to multiply to: </label><br>
+        <input type="text" id="multnum" name="multnum"/>
+        <input type="submit" value="Generate Table"/>
+    </form>
+    <table>
+        <!--Code below was assisted by ChatGPT, specifically the <tr> and <td> tags to help organize the table, otherwise the for loops and the multiplication parts were done by me-->
+        <?php
+            $input=$_POST['multnum']; //Gets the input from the input above
+            for($i=1; $i<=$input; $i++){ //Iterate from 1 to the input given, increment each time
+                echo "<tr>"; //Start a new row
+                for($j=1; $j<=$input; $j++){ //iterate again for the columns
+                    echo "<td>".$i*$j."</td>"; //Print the product of the two numbers and put it in its own cell
+                }
+                echo "</tr>"; //End the row
+            }
+        ?>
+    </table>
 </body>
 </html>
