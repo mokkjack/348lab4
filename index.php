@@ -8,8 +8,9 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <IMG src="https://raw.githubusercontent.com/mokkjack/mokkjack.github.io/refs/heads/main/pfp.jpg" width="256" height="256">
         <h2>Welcome to the website, this is for my Lab 4 assignment.</h2>
-    <p>These are very important videos. Watch them.</p>
-    <a href="https://www.youtube.com/watch?v=ErDYd6GO16o">2019 Stanley Cup Champions</a> <br>
+    <h3>One of the most important moments ever.</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ErDYd6GO16o?si=XKKRnBLLEKQYczAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>Also a super important video, I wish it was still like this..</p>
     <a href="https://www.youtube.com/watch?v=AIMOY6CoQKI">2022 NCAA Basketball National Champions</a> <br>
     </div><br>
     <!--CSS Changer-->
@@ -18,12 +19,16 @@
         <style>
             :root{
                 --borwidth:12px;
-                --clr: rgb(255,0,0);
+                --clr: rgb(0, 0, 0);
+                --textclr: rgb(0, 0, 0);
             }
-            #paragraph{
+            #paragraph {
             border-style: solid;
             border-width: var(--borwidth);
-            color: var(--clr);
+            border-color: var(--clr);
+            }
+            #paragraph p{
+                color: var(--textclr);
             }
         </style>
     </div>
@@ -40,6 +45,7 @@
         function colorchanger(){
             var colour=document.getElementById('newcolor').value;
             document.documentElement.style.setProperty('--clr',colour)
+            document.documentElement.style.setProperty('--textclr',colour)
         }
     </script>
     <!--Password Check Function-->
